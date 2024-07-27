@@ -1,5 +1,3 @@
-/*	Question Set 1 - Easy */
-
 /* Q1: Who is the senior most employee based on job title? */
 
 SELECT title, last_name, first_name 
@@ -44,10 +42,6 @@ GROUP BY customer.customer_id
 ORDER BY total_spending DESC
 LIMIT 1;
 
-
-
-
-/* Question Set 2 - Moderate */
 
 /* Q1: Write query to return the email, first name, last name, & Genre of all Rock Music listeners. 
 Return your list ordered alphabetically by email starting with A. */
@@ -102,10 +96,6 @@ WHERE miliseconds > (
 	FROM track )
 ORDER BY miliseconds DESC;
 
-
-
-
-/* Question Set 3 - Advance */
 
 /* Q1: Find how much amount spent by each customer on artists? Write a query to return customer name, artist name and total spent */
 
@@ -187,9 +177,6 @@ WHERE sales_per_country.purchases_per_genre = max_genre_per_country.max_genre_nu
 Write a query that returns the country along with the top customer and how much they spent. 
 For countries where the top amount spent is shared, provide all customers who spent this amount. */
 
-/* Steps to Solve:  Similar to the above question. There are two parts in question- 
-first find the most spent on music for each country and second filter the data for respective customers. */
-
 /* Method 1: using CTE */
 
 WITH Customter_with_country AS (
@@ -224,7 +211,3 @@ ON cc.billing_country = ms.billing_country
 WHERE cc.total_spending = ms.max_spending
 ORDER BY 1;
 
-
-/* source: www.youtube.com/@RishabhMishraOfficial */
-
-/* Thank You :) */
